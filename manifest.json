@@ -1,0 +1,35 @@
+ {
+  "manifest_version": 3,
+  "name": "LeetCode Discipline Enforcer",
+  "version": "1.0",
+  "description": "Blocks distracting sites if LeetCode daily problem is not solved",
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "*://*.youtube.com/*",
+    "*://*.instagram.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
