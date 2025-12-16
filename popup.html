@@ -13,13 +13,34 @@
     <!-- Form Section -->
     <div id="formSection">
       <div class="form-group">
-        <label for="username">LeetCode Username</label>
+        <label for="username">LeetCode ID</label>
         <input id="username" type="text" placeholder="e.g., john_doe" />
       </div>
 
       <div class="form-group">
+        <label for="popularSites">Quick Add Popular Sites</label>
+        <div class="dropdown-wrapper">
+          <select id="popularSites">
+            <option value="">Select a website...</option>
+            <option value="youtube.com">🎥 YouTube</option>
+            <option value="instagram.com">📸 Instagram</option>
+            <option value="reddit.com">🔗 Reddit</option>
+            <option value="twitter.com">𝕏 Twitter / X</option>
+            <option value="facebook.com">👥 Facebook</option>
+            <option value="tiktok.com">🎬 TikTok</option>
+            <option value="twitch.tv">🎮 Twitch</option>
+            <option value="netflix.com">🎞️ Netflix</option>
+            <option value="discord.com">💬 Discord</option>
+            <option value="chatgpt.com">🤖 ChatGPT</option>
+          </select>
+          <button id="addSiteBtn" type="button" class="btn-add">Add</button>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label for="sites">Blocked Sites (comma-separated)</label>
-        <textarea id="sites" placeholder="youtube.com, instagram.com, reddit.com"></textarea>
+        <textarea id="sites" placeholder="e.g., youtube.com, instagram.com, reddit.com"></textarea>
+        <div class="hint">Add popular sites from dropdown or enter custom URLs separated by commas</div>
       </div>
 
       <button id="save">Save Settings</button>
@@ -39,8 +60,7 @@
       </div>
 
       <div class="button-group">
-        <button id="edit" class="btn-secondary">✏️ Edit</button>
-        <button id="clear">Clear Settings</button>
+        <button id="clear">🗑️ Clear Settings</button>
       </div>
     </div>
   </div>
